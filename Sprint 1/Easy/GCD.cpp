@@ -16,7 +16,7 @@ int main() {
         small=a;
     }
     int sub=0;
-    sub = large-small;
+    sub = large+small;
     while(a!=b){
         if(sub>small){
             a=sub;
