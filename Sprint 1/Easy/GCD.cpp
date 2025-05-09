@@ -2,34 +2,16 @@
 using namespace std;
 
 int main() {
-    int a;
-    int b;
-    cin>>a>>b;
-    int large;
-    int small;
-    if(a-b>=0){
-        large=a;
-        small=b;
+    int num1, num2;
+    cin >> num1 >> num2;
+
+    while (num1 != num2) {
+        if (num1 > num2)
+            num1 = num1 - num2;
+        else
+            num2 = num2 - num1;
     }
-    else{
-        large=b;
-        small=a;
-    }
-    int sub=0;
-    sub = large+small;
-    while(a!=b){
-        if(sub>small){
-            a=sub;
-            b=small;
-            sub = sub-small;
-        }
-        else{
-            a=small;
-            b=sub;
-            sub = small-sub;
-        }
-        
-    }
-    cout<<"GCD Of "<<a<<" & "<<b<<" is "<<sub;
+
+    cout << "GCD is: " << num1 << endl;
     return 0;
 }
