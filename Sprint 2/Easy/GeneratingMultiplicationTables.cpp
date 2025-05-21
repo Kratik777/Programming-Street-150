@@ -2,13 +2,15 @@
 using namespace std;
 
 int main() {
-    int start,end; 
+    int start,end;
     cin>>start>>end;
-    for(int index = start ; index <= end ; index++){
-        cout<<"Table of "<<index<<endl;
-        for(int itr = 1; itr <=4 ; itr++){
-            cout<<index<<"*"<<itr<<" = "<<index*itr<<endl;
+    int count = 1;
+    while(count<=4){
+        for(int index = start ; index <= end ; index++){
+            cout<<index<<"*"<<count<<" = "<<index*count<<" ";
         }
+        count++;
+        cout<<endl;
     }
     return 0;
 }
