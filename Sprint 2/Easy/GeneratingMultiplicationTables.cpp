@@ -7,7 +7,7 @@ int main() {
     int count = 1;
     while(count<=4){
         for(int index = start ; index <= end ; index++){
-            cout<<index<<"*"<<count<<" = "<<index*count<<" ";
+            cout<<index<<"*"<<count<<" = "<<index*count<<"   ";
         }
         count++;
         cout<<endl;
