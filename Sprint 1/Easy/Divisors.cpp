@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-    int n;
-    cin>>n;
+    int N;
+    cin>>N;
 
-    for(int index = 1 ; index <=n ; index++){
-        if(n%index ==0 ){
+    for(int index = 1 ; index <=N ; index++){
+        if(N%index ==0 ){
             cout<<index<<" ";
         }
         else{
