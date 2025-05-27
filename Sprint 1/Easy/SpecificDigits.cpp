@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+int SpecificDigits(int num){
+    
+}
+
 int main() {
     int n;
     cin>>n;
