@@ -33,6 +33,10 @@ int main()
   int num;
   cin >> num;
 
+  if(num < 0){
+    cout<<"Enter valid number!";
+  }
+
   if (isArmstrong(num) == num)
   {
     cout << "Armstrong Number";
