@@ -1,29 +1,45 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <math.h>
 using namespace std;
 
-int main(){
-    int num ;
-    cin>>num;
-    int n=0;
-    int rem;
-    int temp = num;
-    int count=0;
+//Function to count the number of digits of a number.
+int numOfDigits(int num)
+{
+  int count = 0;
+  while (num != 0)
+  {
+    count++;
+    num /= 10;
+  }
+  return count;
+}
 
-    while(temp!=0){
-      int digit = temp%10;
-      count++;
-      temp= temp/10;
-    }
-     temp = num;
-    while(temp!=0){
-      rem = temp%10;
-      n = n + pow(rem , count);
-      temp =  temp/10;
-           
-    }
-    if(n == num){
-      cout<<"Armstrong Number";
-    }
-    return 0;
+//Function to calculate the sum of digits raised to app. power.
+int isArmstrong(int num)
+{
+  int digitNum = numOfDigits(num);
+  int sum = 0;
+  while (num != 0)
+  {
+    int rem = num % 10;
+    sum += pow(rem, digitNum);
+    num /= 10;
+  }
+  return sum;
+}
+
+int main()
+{
+  int num;
+  cin >> num;
+
+  if (isArmstrong(num) == num)
+  {
+    cout << "Armstrong Number";
+  }
+  else
+  {
+    cout << "Not an Armstrong Number";
+  }
+  return 0;
 }
