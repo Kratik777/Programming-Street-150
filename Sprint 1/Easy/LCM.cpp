@@ -1,19 +1,29 @@
 #include <iostream>
 using namespace std;
 
+//Function to calculate GCD optimally.
+int GCD(int n1 , int n2){
+        while(n2!=0){
+            int temp = n2;
+            n2 = n1%n2;
+            n1 = temp;
+        }
+        return n1;
+    }
+
+
 int main() {
     int num1, num2;
     cin >> num1 >> num2;
-    int temp1 = num1,temp2 = num2;
+    // Taking abs if numbers are negative:
+    num1 = abs(num1);
+    num2 = abs(num2);
+    // Check for zero:
+    if(num1==0 || num2 == 0)
+     return 0;
+    
+    int ans = (num1*num2)/GCD(num1 , num2);
+    cout<<ans;
 
-    while (num1 != num2) {
-        if (num1 > num2)
-            num1 = num1 - num2;
-        else
-            num2 = num2 - num1;
-    }
-
-    int lcm = (temp1*temp2)/num1;
-    cout<<"LCM is: "<<lcm;
     return 0;
 }
