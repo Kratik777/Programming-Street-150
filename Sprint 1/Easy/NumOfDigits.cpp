@@ -1,18 +1,22 @@
 #include <iostream>
 using namespace std;
+//Function to calculate number of digits.
+int numOfDigits(int num){
+    if(num ==0)
+    return 1;
+    int count = 0;
+    while(num!=0){
+        int rem = num%10;
+        count++;
+        num/=10;
+    }
+    return count;
+}
 
 int main() {
+ 
     int num;
     cin>>num;
-    int flag=0;
-    int ans;
-    
-    while(num!=0){
-          num = num/10;
-          flag++;
-
-    }
-    cout<<"Number of digits is "<<flag<<endl;
-    
+    cout<<numOfDigits(num);
     return 0;
 }

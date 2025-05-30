@@ -1,26 +1,44 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int limit;
-    cin>>limit;
-    for(int index = 2; index<=limit ; index++){
+//Function to print all prime numbers less than given number.
+
+void primeNumbers(int limit){
+    for(int index = 2 ; index < limit ; index++){
         int flag = 0;
-        for(int curNumebr = 2; curNumebr < index; curNumebr++ ){
-            if(index%curNumebr == 0){
-                flag+=1;
+        for(int num = 2; num < index ; num++){
+            if(index % num == 0){
+                flag = 1;
                 break;
             }
             else{
                 continue;
-            }  
-            
+            }
+           
             
         }
-        if(flag == 0 ){
+        if(flag ==0 ){
             cout<<index<<" ";
         }
+        }
+}
+
+int main() {
+    int num;
+    cin>>num;
+    //Check for num less than 1
+    if(num <= 1){
+        cout<<"Enter number greater than 1 only!";
+        return 0;
     }
+
+    primeNumbers(num);
 
     return 0;
 }
+/* 
+Instead of checking divisibility up to index - 1, you can optimize it by checking up to sqrt(index):
+
+for(int num = 2; num * num <= index; num++)
+
+*/

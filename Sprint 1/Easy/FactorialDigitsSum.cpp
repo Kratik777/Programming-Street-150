@@ -1,20 +1,31 @@
 #include <iostream>
 using namespace std;
 
+// Function to calculate factorial:
+int factorial(int num){
+    int fact = 1;
+    while(num>=1){
+        fact*=num;
+        num--;
+    }
+    return fact;
+}
+
+// Function to calculate sum of digits of factorial
+int factDigitSum(int num){
+   int sum = 0;
+   int fact = factorial(num);
+   while(fact!=0){
+    int rem = fact%10;
+    sum+=rem;
+    fact /=10;
+   }
+   return sum;
+}
+
 int main() {
-    int n;
-    cin>>n;
-    long long ans=1;
-    while(n>0){
-        ans = ans*n;
-        n--;
-    }
-    cout<<ans;
-    int sum = 0 ; 
-    while(ans!=0){
-        sum = sum+(ans%10);
-        ans = ans/10;
-    }
-    cout<<sum;
+    int N;
+    cin>>N;
+    cout<<factDigitSum(N);
     return 0;
 }
