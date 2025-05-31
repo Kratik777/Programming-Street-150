@@ -35,6 +35,7 @@ int main()
 
   if(num < 0){
     cout<<"Enter valid number!";
+    return 0;
   }
 
   if (isArmstrong(num) == num)

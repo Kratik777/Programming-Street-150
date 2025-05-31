@@ -2,18 +2,26 @@
 #include <cmath> 
 using namespace std;
 
+//Function to check perfect squares:
+bool perfectSquare(int num){
+    int sqrRoot = sqrt(num);
+    if(sqrRoot*sqrRoot == num ){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 int main() {
     int n;
     cin >> n;
-   
-    double sqrRoot = sqrt(n);  
-    int sqr = sqrRoot * sqrRoot; 
-
-    if (sqr == n) {
-        cout << "Yes";
-    } else {
-        cout << "No";
+    int ans = perfectSquare(n);
+    if(ans){
+        cout<<n<<" is perfect square.";
     }
-
+    else{
+        cout<<n<<" is not a perfect square.";
+    }
     return 0;
 }

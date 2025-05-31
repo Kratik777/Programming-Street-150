@@ -1,17 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int N;
-    cin>>N;
-
-    for(int index = 1 ; index <=N ; index++){
-        if(N%index ==0 ){
+//Function to calculate divisors:
+void divisors(int num){
+    for(int index = 2 ; index <num ; index++){
+        if(num%index ==0 ){
             cout<<index<<" ";
         }
         else{
             continue;
         }
     }
+}
+
+int main() {
+    int N;
+    cin>>N;
+
+    divisors(N);
     return 0;
 }
