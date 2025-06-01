@@ -1,15 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n;
-    cin>>n;
-    int flag =1;
-    for(int row = 0 ;row < n; row++ ){
-        for(int col = 0; col < row+1 ; col++ ){
-            cout<<flag++<<" ";
+// Function to print number pattern:
+void numberPattern(int row){
+    for(int index = 0; index < row; index++){
+        int count = 1;
+        for(int col = 0 ; col < index+1; col++){
+            cout<<count<<" ";
+            count++;
         }
         cout<<endl;
     }
+
+}
+
+int main() {
+    int n;
+    cin>>n;
+    numberPattern(n);
     return 0;
 }

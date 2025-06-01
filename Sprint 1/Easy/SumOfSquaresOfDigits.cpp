@@ -2,7 +2,7 @@
 using namespace std;
 
 // Function to calculate sum of squares of digits of a number.
-int SquareSum(int num){
+int SquareDigitSum(int num){
     int temp = num;
     int sum =0;
     while(temp!=0){
@@ -16,7 +16,7 @@ int SquareSum(int num){
 int main() {
     int n;
     cin>>n;
-    int ans = SquareSum(n);
+    int ans = SquareDigitSum(n);
     cout<<ans;
     return 0;
 }

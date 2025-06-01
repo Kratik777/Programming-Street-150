@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Function to calculate count of specific digit in a number.
+// Function to calculate the count of specific digit in a number.
 int countSpecificDigit(int num , int digit){
     int count = 0 ;
     while(num!=0){
