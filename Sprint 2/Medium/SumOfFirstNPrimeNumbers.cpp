@@ -1,28 +1,31 @@
 #include <iostream>
 using namespace std;
 
+// Function to calculate the sum of first N prime numbers.
+int primeNumberSum(int num){
+    int count = 0;
+    int sum = 0 ;
+    int N = 2;
+    while(count < num){
+        bool isPrime = true;
+        for (int index = 2; index*index <= N; index++){
+            if(N%index == 0){
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime){
+            sum+=N;
+            count++;
+        }
+        N++;
+    }
+    return sum;
+}
+
 int main() {
     int n;
     cin>>n;
-    int count = 0 ; 
-    int num = 2;
-    int sum = 0;
-    while(count < n){
-    int flag = 0;
-
-        for(int index = 2; index < num ; index++ ){
-            if(num%index == 0){
-                flag = 1;
-                break;
-            }
-                     
-        }
-        if(flag == 0){
-            sum+=num;
-            count++;
-        }
-        num++;
-    }
-    cout<<sum;
+    cout<<"Sum of first "<<n<<" prime numbers is: "<<primeNumberSum(n);
     return 0;
 }

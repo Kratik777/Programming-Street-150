@@ -1,22 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n;
-    cin>>n;
-    int count = 0 ;
-    for(int index = 2 ; index <= n; index++){
-        int sum = 0 ; 
+// Function to count perfect numbers upto N.
+int countPerfectNumbers(int N)
+{
+        
+}
 
-        for(int itr = 1; itr < index; itr++){
-            if(index%itr == 0 ){
-                sum = sum+itr;
-            }
-        }
-        if(sum == index){
-          count++;
-        }
-    }
-    cout<<count;
+int main()
+{
+    int n;
+    cin >> n;
+    cout << countPerfectNumbers(n);
     return 0;
 }
