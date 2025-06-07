@@ -4,26 +4,22 @@ using namespace std;
 //Function to print all prime numbers less than given number.
 
 void primeNumbers(int limit){
-    for(int index = 2 ; index < limit ; index++){
-        int flag = 0;
+    for(int index = 2 ; index <= limit ; index++){
+        bool isPrime = true;
         for(int num = 2; num < index ; num++){
             if(index % num == 0){
-                flag = 1;
+                isPrime = false;
                 break;
-            }
-            else{
-                continue;
-            }
-           
-            
+            }           
         }
-        if(flag ==0 ){
+        if(isPrime){
             cout<<index<<" ";
         }
-        }
+    }
 }
 
 int main() {
+
     int num;
     cin>>num;
     //Check for num less than 1

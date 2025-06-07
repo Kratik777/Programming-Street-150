@@ -2,10 +2,10 @@
 using namespace std;
 
 // Function to print factorial of a number.
-int factorial(int num)
+long long factorial(int num)
 {
 
-    int fact = 1;
+    long long fact = 1;
     for (int index = num; index >= 1; index--)
     {
         fact = fact * index;
@@ -26,7 +26,7 @@ int main()
     cout << "Factorial of " << num << " is " << 1;
     return 0;
     }
-    int ans = factorial(num);
+    long long ans = factorial(num);
     cout << "Factorial of " << num << " is " << ans;
     return 0;
 }
