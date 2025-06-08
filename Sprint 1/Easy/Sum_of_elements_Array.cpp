@@ -3,7 +3,7 @@ using namespace std;
 
 // Function to calculate the sum of array elements:
 int elementSum(int arr[], int size){
-    int sum = 0 ;
+    long long sum = 0 ;
     for(int index = 0 ; index < size ; index++){
         sum+=arr[index];
     }
