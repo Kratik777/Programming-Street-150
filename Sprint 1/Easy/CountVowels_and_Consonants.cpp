@@ -3,13 +3,18 @@ using namespace std;
 
 //Function to count vowels and consonants in string:
 pair<int,int> countVowelConsonants(string str){
+
+    if(str.length() == 0){
+        cout<<"Empty string";
+        return make_pair(0,0);
+    }
     int countVowel = 0;
     int countConsonants = 0;
    
     for(int index = 0 ; index<str.size();index++){
         char ch = tolower(str[index]);
-        if(str[index]=='a'||str[index]=='e'||str[index]=='i'||
-            str[index]=='o'||str[index]=='u'){
+        if(ch=='a'||ch=='e'||ch=='i'||
+            ch=='o'||ch=='u'){
                 countVowel++;
         }
         else if(ch >= 'a' && ch <= 'z'){
@@ -24,7 +29,6 @@ int main() {
     cin>>s;
     pair<int,int> ans = countVowelConsonants(s);
     cout<<"Vowels : "<<ans.first<<endl;
-    cout<<"Consonants : "<<ans.second<<endl;
-    
+    cout<<"Consonants : "<<ans.second<<endl;    
     return 0;
 }
