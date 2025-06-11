@@ -16,6 +16,10 @@ int  decimalToBinaryMethod1(int num){
 
 //Function to convert decimal to binary using bitwise:
 int  decimalToBinaryMethod2(int num){
+    if(num < 0){
+        cout << "Negative numbers not supported\n";
+        return -1;
+    }
     int binaryNum = 0;
     int i=0;
     while(num!=0){        
