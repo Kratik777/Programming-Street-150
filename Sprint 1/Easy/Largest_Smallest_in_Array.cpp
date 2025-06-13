@@ -1,27 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Function to find out smallest in array:
-int Large(int arr[] , int size){
+// Pair function to find largest and smallest :
+pair <int,int> getSmallestLargest(int arr[] , int size){
     int large = INT_MIN;
+    int small = INT_MAX;
+
     for(int index = 0 ; index < size ; index++){
-        if(arr[index] > large){
+        if(arr[index]>large ){
             large = arr[index];
         }
-    }
-    return large;
-}
-
-//Function to find out largest in array:
-int small(int arr[] , int size){
-    int small = INT_MAX;
-    for(int index = 0 ; index < size ; index++){
-        if(arr[index] < small){
+        if(arr[index]<small){
             small = arr[index];
         }
     }
-    return small;
+    pair<int,int> result = {small,large}; // { } is more readable than make_pair
+    return result;
 }
+
+
+// //Function to find out smallest in array:
+// int Large(int arr[] , int size){
+//     int large = INT_MIN;
+//     for(int index = 0 ; index < size ; index++){
+//         if(arr[index] > large){
+//             large = arr[index];
+//         }
+//     }
+//     return large;
+// }
+
+// //Function to find out largest in array:
+// int small(int arr[] , int size){
+//     int small = INT_MAX;
+//     for(int index = 0 ; index < size ; index++){
+//         if(arr[index] < small){
+//             small = arr[index];
+//         }
+//     }
+//     return small;
+// }
 
 int main() {
     int n;
@@ -31,6 +49,8 @@ int main() {
     for(int index = 0 ; index <n; index++)
         cin>>arr[index];
     
-   cout<<"Largest:"<<Large(arr , n)<<" "<<"Smallest:"<<small(arr,n);
+//cout<<"Largest:"<<Large(arr , n)<<" "<<"Smallest:"<<small(arr,n);
+    pair<int,int> ans = getSmallestLargest(arr , n);
+    cout<<"smallest:"<<ans.first<<" "<<"largest:"<<ans.second<<endl;
     return 0;
 }
