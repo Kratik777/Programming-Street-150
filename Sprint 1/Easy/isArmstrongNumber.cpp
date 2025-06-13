@@ -2,6 +2,15 @@
 #include <math.h>
 using namespace std;
 
+//Function to get the power manually(faster than pow function):
+int getPower(int base , int expo){
+  int res = 1 ; 
+  while(expo--){
+    res*=base;
+  }
+  return res;
+}
+
 //Function to count the number of digits of a number.
 int numOfDigits(int num)
 {

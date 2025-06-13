@@ -8,6 +8,10 @@ void fibonacciSeries(int limit)
     {
         cout << 0;
     }
+    else if (limit == 1)
+    {
+        cout << 0 << " " << 1 << endl;
+    }
     else
     {
         int n1 = 0;

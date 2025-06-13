@@ -2,7 +2,6 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
-
 using namespace std;
 
 bool isPalindrome(string s){
